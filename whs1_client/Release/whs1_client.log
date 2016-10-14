@@ -1,0 +1,28 @@
+﻿  main.cpp
+  socket.cpp
+  whs1.cpp
+  コードを生成中...
+  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
+whs1.obj : error LNK2028: 未解決のトークン (0A000106) "int __stdcall UTWSRRD1GetLocalAddress(void *,char *)" (?UTWSRRD1GetLocalAddress@@$$FYGHPAXPAD@Z) が関数 "public: int __thiscall rrd1::get_address(void)" (?get_address@rrd1@@$$FQAEHXZ) で参照されました。
+whs1.obj : error LNK2028: 未解決のトークン (0A00010D) "unsigned int __stdcall UTWSRRD1DataCount(void *)" (?UTWSRRD1DataCount@@$$FYGIPAX@Z) が関数 "private: static void __stdcall rrd1::m_callback(void *,void *)" (?m_callback@rrd1@@$$FCGXPAX0@Z) で参照されました。
+whs1.obj : error LNK2028: 未解決のトークン (0A000116) "extern "C" int __stdcall MessageBoxW(struct HWND__ *,wchar_t const *,wchar_t const *,unsigned int)" (?MessageBoxW@@$$J216YGHPAUHWND__@@PB_W1I@Z) が関数 "extern "C" int __cdecl MessageBox(struct HWND__ *,wchar_t const *,wchar_t const *,unsigned int)" (?MessageBox@@$$J0YAHPAUHWND__@@PB_W1I@Z) で参照されました。
+whs1.obj : error LNK2028: 未解決のトークン (0A00011D) "void * __stdcall UTWSOpenDevice(unsigned int,unsigned int)" (?UTWSOpenDevice@@$$FYGPAXII@Z) が関数 "public: char * __thiscall rrd1::open(void)" (?open@rrd1@@$$FQAEPADXZ) で参照されました。
+whs1.obj : error LNK2028: 未解決のトークン (0A000121) "int __stdcall UTWSRRD1StartReceiving(void *,void *,void (__stdcall*)(void *,void *),void *)" (?UTWSRRD1StartReceiving@@$$FYGHPAX0P6GX00@Z0@Z) が関数 "public: void __thiscall rrd1::start(void)" (?start@rrd1@@$$FQAEXXZ) で参照されました。
+whs1.obj : error LNK2028: 未解決のトークン (0A000125) "int __stdcall UTWSRRD1SetCallBackDisconnect(void *,void (__stdcall*)(void *,void *),void *)" (?UTWSRRD1SetCallBackDisconnect@@$$FYGHPAXP6GX00@Z0@Z) が関数 "public: char * __thiscall rrd1::open(void)" (?open@rrd1@@$$FQAEPADXZ) で参照されました。
+whs1.obj : error LNK2028: 未解決のトークン (0A00012C) "unsigned int __stdcall UTWSGetErrorMessage(char *,unsigned int)" (?UTWSGetErrorMessage@@$$FYGIPADI@Z) が関数 "public: char * __thiscall rrd1::open(void)" (?open@rrd1@@$$FQAEPADXZ) で参照されました。
+whs1.obj : error LNK2028: 未解決のトークン (0A00015A) "int __stdcall UTWSCloseDevice(void *)" (?UTWSCloseDevice@@$$FYGHPAX@Z) が関数 "public: char * __thiscall rrd1::close(void)" (?close@rrd1@@$$FQAEPADXZ) で参照されました。
+whs1.obj : error LNK2028: 未解決のトークン (0A00017F) "int __stdcall UTWSRRD1SetLocalAddress(void *,char const *)" (?UTWSRRD1SetLocalAddress@@$$FYGHPAXPBD@Z) が関数 "public: void __thiscall rrd1::set_address(char *)" (?set_address@rrd1@@$$FQAEXPAD@Z) で参照されました。
+whs1.obj : error LNK2028: 未解決のトークン (0A000240) "int __stdcall UTWSRRD1StopReceiving(void *)" (?UTWSRRD1StopReceiving@@$$FYGHPAX@Z) が関数 "public: char * __thiscall rrd1::close(void)" (?close@rrd1@@$$FQAEPADXZ) で参照されました。
+whs1.obj : error LNK2028: 未解決のトークン (0A00024D) "int __stdcall UTWSRRD1GetDataEx(void *,struct RRD1DataEx_ *)" (?UTWSRRD1GetDataEx@@$$FYGHPAXPAURRD1DataEx_@@@Z) が関数 "private: static void __stdcall rrd1::m_callback(void *,void *)" (?m_callback@rrd1@@$$FCGXPAX0@Z) で参照されました。
+whs1.obj : error LNK2019: 未解決の外部シンボル "extern "C" int __stdcall MessageBoxW(struct HWND__ *,wchar_t const *,wchar_t const *,unsigned int)" (?MessageBoxW@@$$J216YGHPAUHWND__@@PB_W1I@Z) が関数 "extern "C" int __cdecl MessageBox(struct HWND__ *,wchar_t const *,wchar_t const *,unsigned int)" (?MessageBox@@$$J0YAHPAUHWND__@@PB_W1I@Z) で参照されました。
+whs1.obj : error LNK2019: 未解決の外部シンボル "void * __stdcall UTWSOpenDevice(unsigned int,unsigned int)" (?UTWSOpenDevice@@$$FYGPAXII@Z) が関数 "public: char * __thiscall rrd1::open(void)" (?open@rrd1@@$$FQAEPADXZ) で参照されました。
+whs1.obj : error LNK2019: 未解決の外部シンボル "unsigned int __stdcall UTWSGetErrorMessage(char *,unsigned int)" (?UTWSGetErrorMessage@@$$FYGIPADI@Z) が関数 "public: char * __thiscall rrd1::open(void)" (?open@rrd1@@$$FQAEPADXZ) で参照されました。
+whs1.obj : error LNK2019: 未解決の外部シンボル "int __stdcall UTWSRRD1SetCallBackDisconnect(void *,void (__stdcall*)(void *,void *),void *)" (?UTWSRRD1SetCallBackDisconnect@@$$FYGHPAXP6GX00@Z0@Z) が関数 "public: char * __thiscall rrd1::open(void)" (?open@rrd1@@$$FQAEPADXZ) で参照されました。
+whs1.obj : error LNK2019: 未解決の外部シンボル "int __stdcall UTWSRRD1StopReceiving(void *)" (?UTWSRRD1StopReceiving@@$$FYGHPAX@Z) が関数 "public: char * __thiscall rrd1::close(void)" (?close@rrd1@@$$FQAEPADXZ) で参照されました。
+whs1.obj : error LNK2019: 未解決の外部シンボル "int __stdcall UTWSCloseDevice(void *)" (?UTWSCloseDevice@@$$FYGHPAX@Z) が関数 "public: char * __thiscall rrd1::close(void)" (?close@rrd1@@$$FQAEPADXZ) で参照されました。
+whs1.obj : error LNK2019: 未解決の外部シンボル "int __stdcall UTWSRRD1GetLocalAddress(void *,char *)" (?UTWSRRD1GetLocalAddress@@$$FYGHPAXPAD@Z) が関数 "public: int __thiscall rrd1::get_address(void)" (?get_address@rrd1@@$$FQAEHXZ) で参照されました。
+whs1.obj : error LNK2019: 未解決の外部シンボル "int __stdcall UTWSRRD1SetLocalAddress(void *,char const *)" (?UTWSRRD1SetLocalAddress@@$$FYGHPAXPBD@Z) が関数 "public: void __thiscall rrd1::set_address(char *)" (?set_address@rrd1@@$$FQAEXPAD@Z) で参照されました。
+whs1.obj : error LNK2019: 未解決の外部シンボル "unsigned int __stdcall UTWSRRD1DataCount(void *)" (?UTWSRRD1DataCount@@$$FYGIPAX@Z) が関数 "private: static void __stdcall rrd1::m_callback(void *,void *)" (?m_callback@rrd1@@$$FCGXPAX0@Z) で参照されました。
+whs1.obj : error LNK2019: 未解決の外部シンボル "int __stdcall UTWSRRD1GetDataEx(void *,struct RRD1DataEx_ *)" (?UTWSRRD1GetDataEx@@$$FYGHPAXPAURRD1DataEx_@@@Z) が関数 "private: static void __stdcall rrd1::m_callback(void *,void *)" (?m_callback@rrd1@@$$FCGXPAX0@Z) で参照されました。
+whs1.obj : error LNK2019: 未解決の外部シンボル "int __stdcall UTWSRRD1StartReceiving(void *,void *,void (__stdcall*)(void *,void *),void *)" (?UTWSRRD1StartReceiving@@$$FYGHPAX0P6GX00@Z0@Z) が関数 "public: void __thiscall rrd1::start(void)" (?start@rrd1@@$$FQAEXXZ) で参照されました。
+C:\Users\junya-s\Desktop\whs1_client\Release\whs1_client.exe : fatal error LNK1120: 22 件の未解決の外部参照

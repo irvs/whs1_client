@@ -45,14 +45,21 @@ void rrd1::set_address(char* add){
 }
 
 void rrd1::ConvertReceivedData(){
-	for (int i = 0; i != m_data.data_count; ++i){
+	for (int i = 0; i != m_data.data_count; ++i) {
 		if (now_count + i >= MAX_DATA)now_count -= MAX_DATA;
 		hakei[now_count + i] = m_data.data[i].ecg;
-		temp[now_count + i] = (int)(m_data.data[i].temp*10);
+		temp[now_count + i] = m_data.data[i].temp;
+		acc_x[now_count + i] = m_data.data[i].acc_x;
+		acc_y[now_count + i] = m_data.data[i].acc_y;
+		acc_z[now_count + i] = m_data.data[i].acc_z;
+		motion[now_count + i] = sqrt(m_data.data[i].acc_x*m_data.data[i].acc_x + m_data.data[i].acc_y*m_data.data[i].acc_y + m_data.data[i].acc_z*m_data.data[i].acc_z) - 1;
+		msec = m_data.sec*1000 + m_data.msec;
 		if (send_flag == true){
-			int temp = (int)(m_data.data[i].temp * 10);
-			int senddata = ((m_data.data[i].ecg & 0xffff) << 16) | (temp & 0xffff);
-			sock.Send(&senddata,sizeof(senddata));
+			int senddata[3];
+			senddata[0] = ((msec & 0xffff) << 16) | (hakei[now_count + i] & 0xffff);
+			senddata[1] = (((int)(100*temp[now_count + i]) & 0xffff) << 16) | ((int)(100*acc_x[now_count + i]) & 0xffff);
+			senddata[2] = (((int)(100*acc_y[now_count + i]) & 0xffff) << 16) | ((int)(100*acc_z[now_count + i]) & 0xffff);
+			sock.Send(senddata,sizeof(senddata));
 		}
 	}
 	now_count += m_data.data_count;

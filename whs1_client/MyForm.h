@@ -74,6 +74,15 @@ namespace WHS1_test {
 	private: System::Windows::Forms::TextBox^  textBox6;
 	private: System::Windows::Forms::TextBox^  textBox5;
 	private: System::Windows::Forms::TextBox^  textBox4;
+	private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart2;
+	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::TextBox^  textBox9;
+	private: System::Windows::Forms::Label^  label8;
+	private: System::Windows::Forms::TextBox^  textBox10;
+	private: System::Windows::Forms::TextBox^  textBox11;
+	private: System::Windows::Forms::Label^  label9;
+	private: System::Windows::Forms::TextBox^  textBox12;
+	private: System::Windows::Forms::Label^  label10;
 
 
 
@@ -110,6 +119,21 @@ namespace WHS1_test {
 				800));
 			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint6 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(500,
 				300));
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint7 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(0,
+				500));
+			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint8 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(100,
+				800));
+			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint9 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(200,
+				200));
+			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint10 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(300,
+				500));
+			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint11 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(400,
+				800));
+			System::Windows::Forms::DataVisualization::Charting::DataPoint^  dataPoint12 = (gcnew System::Windows::Forms::DataVisualization::Charting::DataPoint(500,
+				300));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button2 = (gcnew System::Windows::Forms::Button());
@@ -136,9 +160,19 @@ namespace WHS1_test {
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->chart2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
+			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			this->groupBox2->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// button1
@@ -321,6 +355,7 @@ namespace WHS1_test {
 			this->chart1->Size = System::Drawing::Size(468, 113);
 			this->chart1->TabIndex = 15;
 			this->chart1->Text = L"chart1";
+			this->chart1->Click += gcnew System::EventHandler(this, &MyForm::chart1_Click_1);
 			// 
 			// checkBox1
 			// 
@@ -419,11 +454,129 @@ namespace WHS1_test {
 			this->textBox4->TabIndex = 17;
 			this->textBox4->Text = L"192";
 			// 
+			// chart2
+			// 
+			chartArea2->AxisX->Crossing = 1.7976931348623157E+308;
+			chartArea2->AxisX->LabelStyle->Enabled = false;
+			chartArea2->AxisX->LineColor = System::Drawing::Color::DarkGray;
+			chartArea2->AxisX->MajorGrid->LineColor = System::Drawing::Color::DarkGray;
+			chartArea2->AxisX->MajorTickMark->Enabled = false;
+			chartArea2->AxisX->Maximum = 500;
+			chartArea2->AxisX->Minimum = 0;
+			chartArea2->AxisX->MinorGrid->Enabled = true;
+			chartArea2->AxisX->MinorGrid->LineColor = System::Drawing::Color::DarkGray;
+			chartArea2->AxisX->TitleForeColor = System::Drawing::Color::DarkGray;
+			chartArea2->AxisY->LabelStyle->Enabled = false;
+			chartArea2->AxisY->LineColor = System::Drawing::Color::DarkGray;
+			chartArea2->AxisY->MajorGrid->LineColor = System::Drawing::Color::DarkGray;
+			chartArea2->AxisY->MajorTickMark->Enabled = false;
+			chartArea2->AxisY->Maximum = 4;
+			chartArea2->AxisY->Minimum = -1;
+			chartArea2->AxisY->TitleForeColor = System::Drawing::Color::DarkGray;
+			chartArea2->BorderColor = System::Drawing::Color::DarkGray;
+			chartArea2->Name = L"ChartArea1";
+			this->chart2->ChartAreas->Add(chartArea2);
+			legend2->Enabled = false;
+			legend2->Name = L"Legend1";
+			legend2->TextWrapThreshold = 0;
+			this->chart2->Legends->Add(legend2);
+			this->chart2->Location = System::Drawing::Point(12, 309);
+			this->chart2->Name = L"chart2";
+			series2->ChartArea = L"ChartArea1";
+			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			series2->Legend = L"Legend1";
+			series2->Name = L"Series1";
+			series2->Points->Add(dataPoint7);
+			series2->Points->Add(dataPoint8);
+			series2->Points->Add(dataPoint9);
+			series2->Points->Add(dataPoint10);
+			series2->Points->Add(dataPoint11);
+			series2->Points->Add(dataPoint12);
+			series2->XValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::UInt32;
+			series2->YValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::UInt32;
+			this->chart2->Series->Add(series2);
+			this->chart2->Size = System::Drawing::Size(468, 113);
+			this->chart2->TabIndex = 18;
+			this->chart2->Text = L"chart2";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(37, 287);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(29, 12);
+			this->label7->TabIndex = 19;
+			this->label7->Text = L"‘Ì“®";
+			// 
+			// textBox9
+			// 
+			this->textBox9->Location = System::Drawing::Point(72, 284);
+			this->textBox9->Name = L"textBox9";
+			this->textBox9->Size = System::Drawing::Size(47, 19);
+			this->textBox9->TabIndex = 20;
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(130, 287);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(40, 12);
+			this->label8->TabIndex = 21;
+			this->label8->Text = L"ACC_X";
+			// 
+			// textBox10
+			// 
+			this->textBox10->Location = System::Drawing::Point(177, 284);
+			this->textBox10->Name = L"textBox10";
+			this->textBox10->Size = System::Drawing::Size(47, 19);
+			this->textBox10->TabIndex = 22;
+			// 
+			// textBox11
+			// 
+			this->textBox11->Location = System::Drawing::Point(282, 284);
+			this->textBox11->Name = L"textBox11";
+			this->textBox11->Size = System::Drawing::Size(47, 19);
+			this->textBox11->TabIndex = 24;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(235, 287);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(40, 12);
+			this->label9->TabIndex = 23;
+			this->label9->Text = L"ACC_Y";
+			// 
+			// textBox12
+			// 
+			this->textBox12->Location = System::Drawing::Point(388, 284);
+			this->textBox12->Name = L"textBox12";
+			this->textBox12->Size = System::Drawing::Size(47, 19);
+			this->textBox12->TabIndex = 26;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(341, 287);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(40, 12);
+			this->label10->TabIndex = 25;
+			this->label10->Text = L"ACC_Z";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(492, 287);
+			this->ClientSize = System::Drawing::Size(492, 431);
+			this->Controls->Add(this->textBox12);
+			this->Controls->Add(this->label10);
+			this->Controls->Add(this->textBox11);
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->textBox10);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->textBox9);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->chart2);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->chart1);
 			this->Controls->Add(this->label4);
@@ -445,6 +598,7 @@ namespace WHS1_test {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
 			this->groupBox2->ResumeLayout(false);
 			this->groupBox2->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart2))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -459,6 +613,11 @@ namespace WHS1_test {
 				 chart1->Series->Add("hakei");
 				 chart1->Series["hakei"]->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
 				 chart1->Series["hakei"]->Color = Color::LightGreen;
+
+				 chart2->Series->Clear();
+				 chart2->Series->Add("motion");
+				 chart2->Series["motion"]->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+				 chart2->Series["motion"]->Color = Color::LightSkyBlue;
 
 				 int ip[4];
 				 ip[0] = Convert::ToInt32(textBox4->Text);
@@ -507,12 +666,18 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e) {
 			 if (rrd.is_received){
 				 textBox2->Text = rrd.hakei[rrd.now_count-1].ToString();
-				 textBox3->Text = (rrd.temp[rrd.now_count-1]*0.1).ToString();
+				 textBox3->Text = rrd.temp[rrd.now_count-1].ToString("F");
+				 textBox9->Text = rrd.motion[rrd.now_count - 1].ToString("F");
+				 textBox10->Text = rrd.acc_x[rrd.now_count - 1].ToString("F");
+				 textBox11->Text = rrd.acc_y[rrd.now_count - 1].ToString("F");
+				 textBox12->Text = rrd.acc_z[rrd.now_count - 1].ToString("F");
 				 chart1->Series["hakei"]->Points->Clear();
-				 for (int i = 0; i < 500; i++){
+				 chart2->Series["motion"]->Points->Clear();
+				 for (int i = 0; i < MAX_DATA; i++){
 					 int k = i;
-					 if (rrd.now_count - 1 - k < 0) k -= 500;
-					 if (rrd.hakei[rrd.now_count - 1 - k]!=0)  chart1->Series["hakei"]->Points->AddXY(500-i, rrd.hakei[rrd.now_count-1-k]);
+					 if (rrd.now_count - 1 - k < 0) k -= MAX_DATA;
+					 if (rrd.hakei[rrd.now_count - 1 - k]!=0)  chart1->Series["hakei"]->Points->AddXY(MAX_DATA-i, rrd.hakei[rrd.now_count-1-k]);
+					 if (rrd.motion[rrd.now_count - 1 - k]!=0)  chart2->Series["motion"]->Points->AddXY(MAX_DATA-i, rrd.motion[rrd.now_count-1-k]);
 				 }
 			 }
 }
@@ -542,12 +707,8 @@ private: System::Void checkBox1_CheckedChanged(System::Object^  sender, System::
 			 else rrd.send_flag = false;
 }
 private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {
-			 int hakei, temp;
-			 hakei = 1234;
-			 temp = 5678;
-			 int senddata;
-			 senddata = ((hakei & 0xffff) << 16) | (temp & 0xffff);
-			 sock.Send(&senddata, sizeof(senddata));
+}
+private: System::Void chart1_Click_1(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }

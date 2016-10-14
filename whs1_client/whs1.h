@@ -6,7 +6,7 @@
 
 #define MAX_DATA 500
 
-class rrd1{
+class rrd1 {
 	HANDLE m_hRRD1;
 	static VOID WINAPI m_callbackDisconnect(void* _p, void* _h);
 	static VOID WINAPI m_callback(void* _p, void* _h);
@@ -16,7 +16,12 @@ public:
 	int is_received;
 	char address[11];
 	int hakei[MAX_DATA];
-	int temp[MAX_DATA];
+	double temp[MAX_DATA];
+	double acc_x[MAX_DATA];
+	double acc_y[MAX_DATA];
+	double acc_z[MAX_DATA];
+	double motion[MAX_DATA];
+	int msec;
 	int now_count;
 	bool send_flag;
 	rrd1(){
